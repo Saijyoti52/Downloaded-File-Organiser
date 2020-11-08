@@ -2,20 +2,20 @@ import os
 import shutil
 import sys
 
-
+path='C:/Users/Jyoti/Downloads'
 while (1):
 
-    files_present=os.listdir('C:/Users/Jyoti/Downloads')
+    files_present=os.listdir(path)
     if files_present!=None:
         for i in files_present:
             
             if i.endswith('.exe'):
-                shutil.move(os.path.join('C:/Users/Jyoti/Downloads',i),os.path.join('C:/Users/Jyoti/OneDrive/Desktop',i))
+                shutil.move(os.path.join(path,i),os.path.join('C:/Users/Jyoti/OneDrive/Desktop',i))
             elif i.endswith('.txt') or i.endswith('.docx'):
-                shutil.move(os.path.join('C:/Users/Jyoti/Downloads',i),os.path.join('C:/UsersJyoti/OneDrive/Documents',i))
+                shutil.move(os.path.join(path,i),os.path.join('C:/UsersJyoti/OneDrive/Documents',i))
             elif i.endswith('.jpeg') or i.endswith('.png') or i.endswith('.jfif'):
-                shutil.move(os.path.join('C:/Users/Jyoti/Downloads',i),os.path.join('C:/Users/Jyoti/OneDrive/Pictures/Saved Pictures',i))
+                shutil.move(os.path.join(path,i),os.path.join('C:/Users/Jyoti/OneDrive/Pictures/Saved Pictures',i))
             elif i.endswith('.mov') or i.endswith('.avi') or i.endswith('.wmv'):
-                shutil.move(os.path.join('C:/Users/Jyoti/Downloads',i),os.path.join('C:/Users/Jyoti/Videos',i))
+                shutil.move(os.path.join(path,i),os.path.join('C:/Users/Jyoti/Videos',i))
             elif i.endswith('.mp4') or i.endswith('.mpeg'):
-                shutil.move(os.path.join('C:/Users/Jyoti/Downloads',i),os.path.join('C:/Users/Jyoti/Music',i))
+                shutil.move(os.path.join(path,i),os.path.join('C:/Users/Jyoti/Music',i))
